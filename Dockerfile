@@ -13,9 +13,10 @@ RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
 RUN mkdir -p /root/.jupyter /home/ubuntu
 COPY env.yml /root/env.yml
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
-RUN /conda/bin/conda env create -q -f /root/env.yml && \
+RUN PATH=/conda/envs/canary/bin:$PATH /conda/bin/conda env create -q -f /root/env.yml && \
     ln -s /conda/envs/canary /canary && \
-    ln -s /canary/lib/python3.6/site-packages/numpy/core/include/numpy /canary/include/python3.6m/numpy
+    ln -s /canary/lib/python3.6/site-packages/numpy/core/include/numpy /canary/include/python3.6m/numpy && \
+    rm -rf /root/.cache
 
 ENV prefix="/canary/"
 
