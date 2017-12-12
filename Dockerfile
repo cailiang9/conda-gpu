@@ -5,7 +5,7 @@ MAINTAINER Cailiang
 ENV CONDA_DIR=/conda CONDA_VER=4.3.30
 
 # Install conda
-RUN mkdir -p $CONDA_DIR && apt update && apt install -y curl && \
+RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
     curl https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  -o mconda.sh && \
     /bin/bash mconda.sh -f -b -p $CONDA_DIR && \
     rm mconda.sh
@@ -22,4 +22,4 @@ ENV prefix="/canary/"
 WORKDIR /home/ubuntu
 EXPOSE 6006
 EXPOSE 8888
-CMD ["jupyter-notebook", "--allow-root"]
+CMD ["/canary/bin/jupyter-notebook", "--allow-root"]
