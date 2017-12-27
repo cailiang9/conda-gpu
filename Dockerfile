@@ -12,7 +12,9 @@ RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efac
 ENV CUDA_VERSION 8.0.61
 
 ENV CUDA_PKG_VERSION 8-0=$CUDA_VERSION-1
-ENV CUDA_LIBS cuda-nvrtc-dev-$CUDA_PKG_VERSION \
+ENV CUDA_LIBS cuda-core-$CUDA_PKG_VERSION \
+        cuda-misc-headers-$CUDA_PKG_VERSION \
+        cuda-nvrtc-dev-$CUDA_PKG_VERSION \
         cuda-nvml-dev-$CUDA_PKG_VERSION \
         cuda-nvgraph-dev-$CUDA_PKG_VERSION \
         cuda-cusolver-dev-$CUDA_PKG_VERSION \
