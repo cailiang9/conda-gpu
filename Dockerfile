@@ -5,7 +5,7 @@ MAINTAINER Cailiang
 ENV CONDA_DIR=/conda CONDA_VER=4.4.10
 
 # Install conda
-RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
+RUN mkdir -p $CONDA_DIR && apt update && apt install -y git bzip2 curl && \
     curl https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  -o mconda.sh && \
     /bin/bash mconda.sh -f -b -p $CONDA_DIR && \
     rm mconda.sh
