@@ -1,8 +1,8 @@
-FROM nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
+FROM ubuntu:16.04
 
 MAINTAINER Cailiang
 
-ENV CONDA_DIR=/conda CONDA_VER=4.3.30
+ENV CONDA_DIR=/conda CONDA_VER=4.3.31
 
 # Install conda
 RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
