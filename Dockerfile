@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Cailiang
 
-ENV CONDA_DIR=/conda CONDA_VER=4.3.31
+ENV CONDA_DIR=/conda CONDA_VER=4.4.10
 
 # Install conda
 RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
