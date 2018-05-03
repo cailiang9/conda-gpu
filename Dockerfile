@@ -47,7 +47,7 @@ ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 ENV NVIDIA_REQUIRE_CUDA "cuda>=8.0"
 
-ENV CONDA_DIR=/conda CONDA_VER=4.3.30
+ENV CONDA_DIR=/conda CONDA_VER=4.5.1
 
 # Install conda
 RUN mkdir -p $CONDA_DIR && apt update && apt install -y git curl && \
