@@ -59,7 +59,7 @@
 #c.NotebookApp.allow_origin_pat = ''
 
 ## Whether to allow the user to run the notebook as root.
-#c.NotebookApp.allow_root = False
+c.NotebookApp.allow_root = True
 
 ## DEPRECATED use base_url
 #c.NotebookApp.base_project_url = '/'
@@ -159,7 +159,7 @@ c.NotebookApp.iopub_data_rate_limit = 0
 #c.NotebookApp.iopub_msg_rate_limit = 1000
 
 ## The IP address the notebook server will listen on.
-c.NotebookApp.ip = ''
+c.NotebookApp.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
@@ -258,7 +258,7 @@ c.NotebookApp.port = 8888
 #  
 #  Setting to an empty string disables authentication altogether, which is NOT
 #  RECOMMENDED.
-c.NotebookApp.token = ''
+c.NotebookApp.token = 'calvinclliu-pc0'
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
